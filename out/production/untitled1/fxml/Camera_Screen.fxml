@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="563.0" style="-fx-background-color: #2F3439;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CameraController">
+   <children>
+      <StackPane layoutX="37.0" layoutY="38.0" maxHeight="282.0" maxWidth="507.0" minHeight="282.0" minWidth="507.0" prefHeight="282.0" prefWidth="507.0" style="-fx-padding: 5; -fx-background-color: gray;">
+         <children>
+            <ImageView fx:id="currentFrame" fitHeight="282.0" fitWidth="507.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
