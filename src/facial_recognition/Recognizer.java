@@ -36,9 +36,7 @@ public class Recognizer {
 	public RecognizedFace Prediction(final Mat testImage) {
 
 		final Mat temp = Utils.resizeFace(Utils.toGrayScale(testImage));
-		System.out.println(faceRecognizer.predict(temp));
 		faceRecognizer.predict(temp, labels, confidence);
-		System.out.println(confidence[0] + "   " + labels[0]);
 		if (confidence[0] < Constants.RECOGNITION_THRESHOLD && labels[0] != 0) {
 
 			//System.out.println("Predicted label: " + predictedLabel.toString() + " Name: " + Name.get(predictedLabel.intValue()));

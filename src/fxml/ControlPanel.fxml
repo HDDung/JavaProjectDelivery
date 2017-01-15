@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2F3439;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXController">
    <children>
@@ -28,6 +23,7 @@
       </JFXButton>
       <JFXButton fx:id="but_cap" buttonType="RAISED" layoutX="347.0" layoutY="138.0" onAction="#CaptureFace" prefHeight="46.0" prefWidth="235.0" ripplerFill="#14d90d" text="Capture Face" textFill="WHITE">
           <graphic>
+
               <ImageView preserveRatio="true">
                   <image>
                       <Image url="@../../material/Capture.png" />
@@ -46,7 +42,7 @@
       </JFXButton>
       <JFXTextField fx:id="Name" layoutX="40.0" layoutY="286.0" maxWidth="280.0" minWidth="280.0" onAction="#MoveNextImg" prefHeight="31.0" prefWidth="280.0" promptText="Insert name " style="-fx-text-fill: white;" />
 
-      <JFXButton fx:id="NextBut" buttonType="RAISED" layoutX="83.0" layoutY="324.0" onAction="#MoveNextImg" prefHeight="41.0" prefWidth="148.0" ripplerFill="#14d90d" text="Next" textFill="WHITE">
+      <JFXButton fx:id="NextBut" layoutX="83.0" layoutY="324.0" onAction="#MoveNextImg" prefHeight="41.0" prefWidth="148.0" ripplerFill="#14d90d" text="Next" textFill="WHITE">
           <graphic>
               <ImageView>
                   <image>

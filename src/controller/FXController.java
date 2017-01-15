@@ -1,5 +1,6 @@
 package controller;
 
+import application.Main;
 import com.jfoenix.controls.JFXButton;
 import core.DataHandler;
 import javafx.event.ActionEvent;
@@ -93,8 +94,9 @@ public class FXController
 				camera_stage.show();
 				camera_controller = new CameraController();
 				camera_controller = loader_camera.getController();
-				
-				
+				camera_stage.setResizable(false);
+
+
 				//set the proper behavior on closing the camera_screen
 				camera_stage.setOnCloseRequest((new EventHandler<WindowEvent>() {
 					public void handle(WindowEvent we)
@@ -207,20 +209,20 @@ public class FXController
 		if (AllowToNextImg) {
 			System.out.println(Name.getText());
 			if (!Name.getText().trim().equals("")) {
-				Namefile = camera_controller.Manager().IntegrityName(Name.getText());
+				Namefile = Main.manager.IntegrityName(Name.getText());
 				holder = false;
 				if (Namefile != null) {
-					DataHandler.updateData(Namefile, facewrite, camera_controller.Manager().getSize());
+					DataHandler.updateData(Namefile, facewrite, Main.manager.getSize());
 				}
 				Namefile = new String();
-				camera_controller.Manager().updateDatabase();
+				Main.manager.updateDatabase();
 			} else {
 				System.err.print("Please insert Name");
 			}
 			Name.clear();
 		} else {
 			System.err.println("No more unknown face");
-
+			Name.clear();
 		}
 	}
 	/**

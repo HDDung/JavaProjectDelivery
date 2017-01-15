@@ -35,7 +35,6 @@ public class Supervisor {
 	}
 
 	private Vector<RecognizedFace> PredictionFace(MatOfRect faces, Mat frame) {
-		System.out.println(recognizer.Prediction(Imgcodecs.imread("Face_Recog/B/3-Anh-1-.bmp")).getName());
 		Vector<RecognizedFace> result = new Vector<>();
 		for (Rect face : faces.toArray()){
 			result.addElement(recognizer.Prediction(new Mat(frame, face)));

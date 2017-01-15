@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="untitled1:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/untitled1_jar</output-path>
+    <root id="archive" name="untitled1.jar">
+      <element id="module-output" name="untitled1" />
+      <element id="extracted-dir" path="$USER_HOME$/jfoenix.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Opencv/opencv_contrib-3.1.0/build/bin/opencv-310.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

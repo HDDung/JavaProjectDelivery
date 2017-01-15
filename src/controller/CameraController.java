@@ -1,5 +1,6 @@
 package controller;
 
+import application.Main;
 import core.Supervisor;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
@@ -29,7 +30,7 @@ public class CameraController
 	// a flag to activate the detector
 	private boolean IsActivateDetector = false;
 	// Detector for Facial detection
-	private Supervisor manager;
+
 
 	public static void updateImageView(ImageView view, Image image) {
 		Utils.onFXThread(view.imageProperty(), image);
@@ -64,7 +65,7 @@ public class CameraController
 						Mat frame = grabFrame();
 						// convert and show the frame
 						if (IsActivateDetector){
-							Image imageToShow = Utils.mat2Image(manager.ImgProcessor(frame));
+							Image imageToShow = Utils.mat2Image(Main.manager.ImgProcessor(frame));
 							CameraController.updateImageView(currentFrame, imageToShow);
 
 						} else {
@@ -164,13 +165,13 @@ public class CameraController
 	}
 
 	public void ActivateDetector() {
-		manager = new Supervisor();
+		Main.CreatNewSuppervisor();
 		IsActivateDetector = true;
 	}
-
+/*
 	public Supervisor Manager() {
 		return manager;
-	}
+	}*/
 
 	public void DeactivateDetector() {
 		IsActivateDetector = false;
@@ -185,6 +186,6 @@ public class CameraController
 	}
 
 	public Vector<Mat> UnknownFaces() {
-		return manager.UnknownFaces(grabFrame());
+		return Main.manager.UnknownFaces(grabFrame());
 	}
 }
